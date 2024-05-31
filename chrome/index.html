@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body
+    style="
+      background-color: black;
+      display: flex;
+      flex-direction: row;
+      margin: 0px;
+      height: 100%;
+      position: relative;
+    "
+  >
+    <div id="sidebar" class="opened" style="margin-left: 0px">
+      <button class="vertical-text" id="sidebar-toggle" style="opacity: 1">
+        <span>pixel mania</span>
+      </button>
+      <div class="pixel-mania-sidebar-content">
+        <div class="pixel-mania-brand"><span>Pixel Mania</span></div>
+        <div class="pixel-mania-loader" style="display: none">
+          <div class="loader"></div>
+        </div>
+        <div class="pixel-mania-menu">
+          <div class="pixel-mania-item active" id="stats">
+            <span class="text-sm">stats</span>
+          </div>
+          <div class="pixel-mania-item" id="timer">
+            <span class="text-sm">timer</span>
+          </div>
+          <div class="pixel-mania-item" id="storage">
+            <span class="text-sm">storage</span>
+          </div>
+          <div class="pixel-mania-item" id="task">
+            <span class="text-sm">task</span>
+          </div>
+        </div>
+        <div class="pixel-mania-timer">
+          <button
+            style="
+              padding: 0.5rem 1rem;
+              border-radius: 0.5rem;
+              border: none;
+              outline: none;
+              width: max-content;
+              background-color: rgba(225, 225, 225, 0.5);
+            "
+          >
+            <span classname="text-md">add current location +</span>
+          </button>
+          <div class="pixel-mania-lands">
+            <div class="pixel-mania-land">
+              <span>currentMap</span>
+              <div>
+                <input type="text" class="filter" placeholder="filter" />
+              </div>
+              <button
+                style="
+                  position: absolute;
+                  top: 0.5rem;
+                  right: 0.5rem;
+                  display: flex;
+                  width: max-content;
+                  background-color: transparent;
+                  border: none;
+                  outline: none;
+                  cursor: pointer;
+                "
+              >
+                <img
+                  src="https://d31ss916pli4td.cloudfront.net/game/ui/kit/closebtn.png"
+                  style="width: 1.5rem"
+                  alt=""
+                />
+              </button>
+              <div class="pixel-mania-industries">
+                <div
+                  style="
+                    position: relative;
+                    width: 5rem;
+                    height: 5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                  "
+                >
+                  <img
+                    alt=""
+                    src="https://d31ss916pli4td.cloudfront.net/game/ui/backpack/backpack_button_slot.png"
+                    style="
+                      position: absolute;
+                      left: 0;
+                      top: 0;
+                      right: 0;
+                      object-fit: contain;
+                      height: 5rem;
+                      width: 5rem;
+                    "
+                  />
+                  <img
+                    src="https://d31ss916pli4td.cloudfront.net/game/ui/skills/skills_icon_aviculture.png?v2"
+                    alt="apiary"
+                    style="height: 2.5rem; position: absolute"
+                  />
+                </div>
+                <div
+                  style="
+                    position: relative;
+                    width: 5rem;
+                    height: 5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                  "
+                >
+                  <img
+                    alt=""
+                    src="https://d31ss916pli4td.cloudfront.net/game/ui/backpack/backpack_button_slot.png"
+                    style="
+                      position: absolute;
+                      left: 0;
+                      top: 0;
+                      right: 0;
+                      object-fit: contain;
+                      height: 5rem;
+                      width: 5rem;
+                    "
+                  />
+                  <img
+                    src="https://d31ss916pli4td.cloudfront.net/game/ui/skills/skills_icon_beekeeping.png?v2"
+                    alt="apiary"
+                    style="height: 2.5rem; position: absolute"
+                  />
+                </div>
+                <div
+                  style="
+                    position: relative;
+                    width: 5rem;
+                    height: 5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                  "
+                >
+                  <img
+                    alt=""
+                    src="https://d31ss916pli4td.cloudfront.net/game/ui/backpack/backpack_button_slot.png"
+                    style="
+                      position: absolute;
+                      left: 0;
+                      top: 0;
+                      right: 0;
+                      object-fit: contain;
+                      height: 5rem;
+                      width: 5rem;
+                    "
+                  />
+                  <img
+                    src="https://d31ss916pli4td.cloudfront.net/game/ui/skills/skills_icon_farming.png?v2"
+                    alt="apiary"
+                    style="height: 2.5rem; position: absolute"
+                  />
+                </div>
+                <div
+                  style="
+                    position: relative;
+                    width: 5rem;
+                    height: 5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                  "
+                >
+                  <img
+                    alt=""
+                    src="https://d31ss916pli4td.cloudfront.net/game/ui/backpack/backpack_button_slot.png"
+                    style="
+                      position: absolute;
+                      left: 0;
+                      top: 0;
+                      right: 0;
+                      object-fit: contain;
+                      height: 5rem;
+                      width: 5rem;
+                    "
+                  />
+                  <img
+                    src="https://d31ss916pli4td.cloudfront.net/game/ui/skills/skills_icon_mining.png?v2"
+                    alt="apiary"
+                    style="height: 2.5rem; position: absolute"
+                  />
+                </div>
+                <div
+                  style="
+                    position: relative;
+                    width: 5rem;
+                    height: 5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                  "
+                >
+                  <img
+                    alt=""
+                    src="https://d31ss916pli4td.cloudfront.net/game/ui/backpack/backpack_button_slot.png"
+                    style="
+                      position: absolute;
+                      left: 0;
+                      top: 0;
+                      right: 0;
+                      object-fit: contain;
+                      height: 5rem;
+                      width: 5rem;
+                    "
+                  />
+                  <img
+                    src="https://d31ss916pli4td.cloudfront.net/game/ui/skills/skills_icon_slugger.png?v2"
+                    alt="apiary"
+                    style="height: 2.5rem; position: absolute"
+                  />
+                </div>
+                <div
+                  style="
+                    position: relative;
+                    width: 5rem;
+                    height: 5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                  "
+                >
+                  <img
+                    alt=""
+                    src="https://d31ss916pli4td.cloudfront.net/game/ui/backpack/backpack_button_slot.png"
+                    style="
+                      position: absolute;
+                      left: 0;
+                      top: 0;
+                      right: 0;
+                      object-fit: contain;
+                      height: 5rem;
+                      width: 5rem;
+                    "
+                  />
+                  <img
+                    src="https://d31ss916pli4td.cloudfront.net/game/ui/skills/skills_icon_ceramicist.png?v2"
+                    alt="apiary"
+                    style="height: 2.5rem; position: absolute"
+                  />
+                </div>
+                <div
+                  style="
+                    position: relative;
+                    width: 5rem;
+                    height: 5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                  "
+                >
+                  <img
+                    alt=""
+                    src="https://d31ss916pli4td.cloudfront.net/game/ui/backpack/backpack_button_slot.png"
+                    style="
+                      position: absolute;
+                      left: 0;
+                      top: 0;
+                      right: 0;
+                      object-fit: contain;
+                      height: 5rem;
+                      width: 5rem;
+                    "
+                  />
+                  <img
+                    src="https://d31ss916pli4td.cloudfront.net/game/ui/skills/skills_icon_cooking.png?v2"
+                    alt="apiary"
+                    style="height: 2.5rem; position: absolute"
+                  />
+                </div>
+                <div
+                  style="
+                    position: relative;
+                    width: 5rem;
+                    height: 5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                  "
+                >
+                  <img
+                    alt=""
+                    src="https://d31ss916pli4td.cloudfront.net/game/ui/backpack/backpack_button_slot.png"
+                    style="
+                      position: absolute;
+                      left: 0;
+                      top: 0;
+                      right: 0;
+                      object-fit: contain;
+                      height: 5rem;
+                      width: 5rem;
+                    "
+                  />
+                  <img
+                    src="https://d31ss916pli4td.cloudfront.net/game/ui/skills/skills_icon_granger.png?v2"
+                    alt="apiary"
+                    style="height: 2.5rem; position: absolute"
+                  />
+                </div>
+                <div
+                  style="
+                    position: relative;
+                    width: 5rem;
+                    height: 5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                  "
+                >
+                  <img
+                    alt=""
+                    src="https://d31ss916pli4td.cloudfront.net/game/ui/backpack/backpack_button_slot.png"
+                    style="
+                      position: absolute;
+                      left: 0;
+                      top: 0;
+                      right: 0;
+                      object-fit: contain;
+                      height: 5rem;
+                      width: 5rem;
+                    "
+                  />
+                  <img
+                    src="https://d31ss916pli4td.cloudfront.net/game/ui/skills/skills_icon_petcare.png?v2"
+                    alt="apiary"
+                    style="height: 2.5rem; position: absolute"
+                  />
+                </div>
+                <div
+                  style="
+                    position: relative;
+                    width: 5rem;
+                    height: 5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                  "
+                >
+                  <img
+                    alt=""
+                    src="https://d31ss916pli4td.cloudfront.net/game/ui/backpack/backpack_button_slot.png"
+                    style="
+                      position: absolute;
+                      left: 0;
+                      top: 0;
+                      right: 0;
+                      object-fit: contain;
+                      height: 5rem;
+                      width: 5rem;
+                    "
+                  />
+                  <img
+                    src="https://d31ss916pli4td.cloudfront.net/game/ui/skills/skills_icon_redifferentiator.png?v2"
+                    alt="apiary"
+                    style="height: 2.5rem; position: absolute"
+                  />
+                </div>
+                <div
+                  style="
+                    position: relative;
+                    width: 5rem;
+                    height: 5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                  "
+                >
+                  <img
+                    alt=""
+                    src="https://d31ss916pli4td.cloudfront.net/game/ui/backpack/backpack_button_slot.png"
+                    style="
+                      position: absolute;
+                      left: 0;
+                      top: 0;
+                      right: 0;
+                      object-fit: contain;
+                      height: 5rem;
+                      width: 5rem;
+                    "
+                  />
+                  <img
+                    src="https://d31ss916pli4td.cloudfront.net/game/ui/skills/skills_icon_textiler.png?v2"
+                    alt="apiary"
+                    style="height: 2.5rem; position: absolute"
+                  />
+                </div>
+                <div
+                  style="
+                    position: relative;
+                    width: 5rem;
+                    height: 5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                  "
+                >
+                  <img
+                    alt=""
+                    src="https://d31ss916pli4td.cloudfront.net/game/ui/backpack/backpack_button_slot.png"
+                    style="
+                      position: absolute;
+                      left: 0;
+                      top: 0;
+                      right: 0;
+                      object-fit: contain;
+                      height: 5rem;
+                      width: 5rem;
+                    "
+                  />
+                  <img
+                    src="https://d31ss916pli4td.cloudfront.net/game/ui/skills/skills_icon_winemaking.png?v2"
+                    alt="apiary"
+                    style="height: 2.5rem; position: absolute"
+                  />
+                </div>
+                <div
+                  style="
+                    position: relative;
+                    width: 5rem;
+                    height: 5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                  "
+                >
+                  <img
+                    alt=""
+                    src="https://d31ss916pli4td.cloudfront.net/game/ui/backpack/backpack_button_slot.png"
+                    style="
+                      position: absolute;
+                      left: 0;
+                      top: 0;
+                      right: 0;
+                      object-fit: contain;
+                      height: 5rem;
+                      width: 5rem;
+                    "
+                  />
+                  <img
+                    src="https://d31ss916pli4td.cloudfront.net/game/ui/skills/skills_icon_woodwork.png?v2"
+                    alt="apiary"
+                    style="height: 2.5rem; position: absolute"
+                  />
+                </div>
+                <div
+                  style="
+                    position: relative;
+                    width: 5rem;
+                    height: 5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                  "
+                >
+                  <img
+                    alt=""
+                    src="https://d31ss916pli4td.cloudfront.net/game/ui/backpack/backpack_button_slot.png"
+                    style="
+                      position: absolute;
+                      left: 0;
+                      top: 0;
+                      right: 0;
+                      object-fit: contain;
+                      height: 5rem;
+                      width: 5rem;
+                    "
+                  />
+                  <img
+                    src="https://d31ss916pli4td.cloudfront.net/uploadedAssets//c30f60e5-10e3-4c39-93b3-8481fef69115.png"
+                    alt="apiary"
+                    style="height: 2.5rem; position: absolute"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var toggle = document.getElementById("sidebar-toggle");
+      toggle.addEventListener("click", () => {
+        var sidebar = document.getElementById("sidebar");
+        if (sidebar.className.includes("opened")) {
+          sidebar.classList.remove("opened");
+          sidebar.style.marginLeft = "-500px";
+        } else {
+          sidebar.classList.add("opened");
+          sidebar.style.marginLeft = "0px";
+        }
+      });
+    </script>
+  </body>
+</html>
